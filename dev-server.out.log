@@ -1,0 +1,21 @@
+
+> cord4assignment@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.12 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.120.82.103:3000
+- Environments: .env
+✓ Ready in 1766ms
+Creating turbopack project { dir: 'D:\\Cord4 Assignment\\cord4assignment', testMode: true }
+
+ GET /api/dataset 200 in 1384ms (next.js: 1342ms, application-code: 43ms)
+ GET / 200 in 1434ms (next.js: 563ms, application-code: 871ms)
+ GET / 200 in 466ms (next.js: 18ms, application-code: 448ms)
+✓ Compiled in 96ms
+ GET / 200 in 494ms (next.js: 99ms, application-code: 395ms)
+ GET / 200 in 259ms (next.js: 7ms, application-code: 252ms)
+ GET / 200 in 174ms (next.js: 16ms, application-code: 159ms)
+ GET / 200 in 498ms (next.js: 110ms, application-code: 388ms)
+ GET / 200 in 233ms (next.js: 6ms, application-code: 226ms)
+ GET / 200 in 138ms (next.js: 11ms, application-code: 127ms)
