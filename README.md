@@ -52,10 +52,6 @@
 
 - PDF export uses a purpose-built executive summary layout rather than screenshotting every interactive dashboard widget.
 
-- [ADD: another cut]
-
-- [ADD: another cut]
-
 ### 6. What's Next (with two more days)
 
 - Add regression tests around cleaning, HRMS reconciliation, joins, and metric calculations.
