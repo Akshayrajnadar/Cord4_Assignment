@@ -57,3 +57,62 @@ Creating turbopack project { dir: 'D:\\Cord4 Assignment\\cord4assignment', testM
  GET / 200 in 331ms (next.js: 10ms, application-code: 321ms)
  GET / 200 in 229ms (next.js: 105ms, application-code: 124ms)
  GET / 200 in 232ms (next.js: 8ms, application-code: 224ms)
+✓ Compiled in 753ms
+ GET / 200 in 996ms (next.js: 468ms, application-code: 528ms)
+ GET / 200 in 455ms (next.js: 85ms, application-code: 369ms)
+ GET / 200 in 297ms (next.js: 135ms, application-code: 163ms)
+ GET / 200 in 308ms (next.js: 22ms, application-code: 286ms)
+ GET / 200 in 348ms (next.js: 96ms, application-code: 252ms)
+ GET / 200 in 290ms (next.js: 10ms, application-code: 280ms)
+ GET / 200 in 238ms (next.js: 11ms, application-code: 227ms)
+ GET / 200 in 231ms (next.js: 12ms, application-code: 219ms)
+ GET / 200 in 190ms (next.js: 45ms, application-code: 145ms)
+ GET / 200 in 192ms (next.js: 9ms, application-code: 183ms)
+ GET / 200 in 193ms (next.js: 87ms, application-code: 106ms)
+ GET / 200 in 81ms (next.js: 12ms, application-code: 69ms)
+✓ Compiled in 67ms
+ GET / 200 in 220ms (next.js: 102ms, application-code: 118ms)
+✓ Compiled in 113ms
+ GET / 200 in 361ms (next.js: 136ms, application-code: 225ms)
+ GET / 200 in 254ms (next.js: 12ms, application-code: 243ms)
+ GET / 200 in 188ms (next.js: 38ms, application-code: 151ms)
+ GET / 200 in 193ms (next.js: 144ms, application-code: 49ms)
+ POST /api/chat 500 in 79ms (next.js: 57ms, application-code: 22ms)
+ POST /api/chat 500 in 15ms (next.js: 6ms, application-code: 9ms)
+ GET / 200 in 495ms (next.js: 8ms, application-code: 487ms)
+✓ Compiled in 2.2s
+ GET / 200 in 706ms (next.js: 266ms, application-code: 440ms)
+ GET / 200 in 124ms (next.js: 17ms, application-code: 106ms)
+✓ Compiled in 54ms
+ GET / 200 in 260ms (next.js: 106ms, application-code: 154ms)
+  Reload env: .env
+ GET / 200 in 125ms (next.js: 67ms, application-code: 59ms)
+  Reload env: .env
+ GET / 200 in 144ms (next.js: 71ms, application-code: 73ms)
+  Reload env: .env
+ GET / 200 in 129ms (next.js: 66ms, application-code: 63ms)
+ POST /api/chat 500 in 654ms (next.js: 27ms, application-code: 627ms)
+ POST /api/chat 500 in 408ms (next.js: 4ms, application-code: 404ms)
+  Reload env: .env
+ GET / 200 in 147ms (next.js: 64ms, application-code: 83ms)
+  Reload env: .env
+ GET / 200 in 131ms (next.js: 63ms, application-code: 68ms)
+ GET / 200 in 339ms (next.js: 7ms, application-code: 332ms)
+ POST /api/chat 500 in 532ms (next.js: 37ms, application-code: 495ms)
+  Reload env: .env
+ GET / 200 in 188ms (next.js: 76ms, application-code: 112ms)
+ GET / 200 in 382ms (next.js: 7ms, application-code: 375ms)
+ POST /api/chat 500 in 1803ms (next.js: 31ms, application-code: 1772ms)
+  Reload env: .env
+ GET / 200 in 192ms (next.js: 72ms, application-code: 120ms)
+ GET / 200 in 424ms (next.js: 6ms, application-code: 418ms)
+ POST /api/chat 500 in 799ms (next.js: 33ms, application-code: 766ms)
+  Reload env: .env
+ GET / 200 in 284ms (next.js: 73ms, application-code: 210ms)
+ GET / 200 in 108ms (next.js: 24ms, application-code: 84ms)
+ GET / 200 in 542ms (next.js: 12ms, application-code: 529ms)
+ POST /api/chat 500 in 946ms (next.js: 38ms, application-code: 908ms)
+  Reload env: .env
+ GET / 200 in 281ms (next.js: 81ms, application-code: 200ms)
+ GET / 200 in 112ms (next.js: 11ms, application-code: 101ms)
+ GET / 200 in 415ms (next.js: 7ms, application-code: 408ms)

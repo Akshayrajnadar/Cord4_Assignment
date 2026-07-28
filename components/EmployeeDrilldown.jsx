@@ -35,11 +35,14 @@ function employeeLabel(employee, hasMetadata) {
   return role ? `${employee.employeeId} - ${role}` : employee.employeeId;
 }
 
-function buildEmployeeOptions(joinedRows, employees) {
+function buildEmployeeOptions(joinedRows, employees, filterToRows = false) {
   const byId = new Map();
+  const rowEmployeeIds = new Set((joinedRows || []).map(employeeIdFor).filter(Boolean));
 
   for (const employee of employees || []) {
-    byId.set(employee.employeeId, { ...employee, hasMetadata: true });
+    if (!filterToRows || rowEmployeeIds.has(employee.employeeId)) {
+      byId.set(employee.employeeId, { ...employee, hasMetadata: true });
+    }
   }
 
   for (const row of joinedRows || []) {
@@ -117,15 +120,25 @@ function Skeleton() {
   );
 }
 
-export default function EmployeeDrilldown({ joinedRows, employees, initialEmployeeId }) {
+export default function EmployeeDrilldown({
+  joinedRows,
+  employeeOptionRows,
+  employees,
+  initialEmployeeId,
+  filterEmployeeOptionsToRows = false,
+}) {
   const [selectedId, setSelectedId] = useState(initialEmployeeId || "");
 
-  const options = useMemo(() => buildEmployeeOptions(joinedRows, employees), [joinedRows, employees]);
+  const options = useMemo(
+    () => buildEmployeeOptions(employeeOptionRows || joinedRows, employees, filterEmployeeOptionsToRows),
+    [employeeOptionRows, joinedRows, employees, filterEmployeeOptionsToRows],
+  );
   const employeesById = useMemo(
     () => new Map((employees || []).map((employee) => [employee.employeeId, employee])),
     [employees],
   );
-  const activeId = selectedId || options[0]?.employeeId || "";
+  const selectedIdIsVisible = options.some((employee) => employee.employeeId === selectedId);
+  const activeId = selectedIdIsVisible ? selectedId : options[0]?.employeeId || "";
   const selectedEmployee = employeesById.get(activeId) || options.find((employee) => employee.employeeId === activeId);
   const selectedRows = (joinedRows || []).filter((row) => employeeIdFor(row) === activeId);
   const stats = employeeStats(selectedRows);

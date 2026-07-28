@@ -150,7 +150,7 @@ export default function BreakdownView({
               fill="#315f72"
               radius={[0, 4, 4, 0]}
               cursor="pointer"
-              onClick={(data) => onBarClick?.(data.name)}
+              onClick={(data) => onBarClick?.(data.name, groupBy)}
             />
           </BarChart>
         </ResponsiveContainer>
