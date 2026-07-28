@@ -15,3 +15,13 @@ Creating turbopack project { dir: 'D:\\Cord4 Assignment\\cord4assignment', testM
  POST /api/chat 200 in 5.1s (next.js: 103ms, application-code: 5.0s)
 ✓ Compiled in 543ms
  GET / 200 in 222ms (next.js: 98ms, application-code: 124ms)
+✓ Compiled in 164ms
+ GET / 200 in 541ms (next.js: 139ms, application-code: 402ms)
+ GET / 200 in 299ms (next.js: 71ms, application-code: 229ms)
+ GET / 200 in 152ms (next.js: 11ms, application-code: 140ms)
+ GET / 200 in 152ms (next.js: 56ms, application-code: 96ms)
+ GET /api/dataset 200 in 138ms (next.js: 77ms, application-code: 60ms)
+ GET /api/dataset 200 in 16ms (next.js: 4ms, application-code: 12ms)
+ GET / 200 in 370ms (next.js: 8ms, application-code: 362ms)
+ GET /api/dataset 200 in 33ms (next.js: 17ms, application-code: 15ms)
+ POST /api/chat 200 in 5.2s (next.js: 62ms, application-code: 5.1s)
