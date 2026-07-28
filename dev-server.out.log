@@ -32,3 +32,28 @@ Creating turbopack project { dir: 'D:\\Cord4 Assignment\\cord4assignment', testM
  GET / 200 in 446ms (next.js: 177ms, application-code: 269ms)
 ✓ Compiled in 136ms
  GET / 200 in 879ms (next.js: 155ms, application-code: 724ms)
+✓ Compiled in 71ms
+ POST /api/chat 200 in 241ms (next.js: 193ms, application-code: 47ms)
+ POST /api/chat 200 in 17ms (next.js: 6ms, application-code: 11ms)
+ POST /api/chat 200 in 14ms (next.js: 4ms, application-code: 10ms)
+✓ Compiled in 2.8s
+ GET / 200 in 1652ms (next.js: 376ms, application-code: 1275ms)
+ GET / 200 in 851ms (next.js: 230ms, application-code: 621ms)
+ GET / 200 in 383ms (next.js: 15ms, application-code: 368ms)
+ GET / 200 in 382ms (next.js: 232ms, application-code: 149ms)
+ GET / 200 in 391ms (next.js: 130ms, application-code: 261ms)
+✓ Compiled in 190ms
+ GET / 200 in 735ms (next.js: 92ms, application-code: 643ms)
+ GET / 200 in 489ms (next.js: 9ms, application-code: 480ms)
+ GET / 200 in 597ms (next.js: 107ms, application-code: 491ms)
+ GET / 200 in 599ms (next.js: 189ms, application-code: 410ms)
+ GET / 200 in 603ms (next.js: 13ms, application-code: 591ms)
+ GET / 200 in 603ms (next.js: 259ms, application-code: 344ms)
+ GET / 200 in 219ms (next.js: 11ms, application-code: 207ms)
+ GET / 200 in 328ms (next.js: 12ms, application-code: 315ms)
+ GET / 200 in 110ms (next.js: 10ms, application-code: 100ms)
+✓ Compiled in 62ms
+ GET / 200 in 552ms (next.js: 96ms, application-code: 456ms)
+ GET / 200 in 331ms (next.js: 10ms, application-code: 321ms)
+ GET / 200 in 229ms (next.js: 105ms, application-code: 124ms)
+ GET / 200 in 232ms (next.js: 8ms, application-code: 224ms)

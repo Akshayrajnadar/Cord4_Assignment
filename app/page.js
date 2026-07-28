@@ -30,16 +30,16 @@ export default function DashboardPage() {
         </header>
 
         <HeadlineNumbers metrics={dataset.headlineMetrics} />
-        <AnomalyCallout anomalies={dataset.anomalies} />
+        <AnomalyCallout anomaly={dataset.anomaly} />
 
         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-          <TrendChart trends={dataset.trends} />
+          <TrendChart trends={dataset.weeklyTrends} trendDirection={dataset.trendDirection} />
           <Breakdown categories={dataset.categoryBreakdown} />
         </div>
 
         <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
           <RankingTable employees={dataset.employeeRankings} />
-          <EmployeeDrilldown employees={dataset.employees} />
+          <EmployeeDrilldown joinedRows={dataset.rows} employees={dataset.employees} />
         </div>
 
         <ChatAssistant />
