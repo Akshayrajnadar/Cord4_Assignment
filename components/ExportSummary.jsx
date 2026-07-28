@@ -30,7 +30,7 @@ function formatDateTime(value) {
 }
 
 function scopeText(activeDepartment, activeCategory) {
-  if (activeDepartment && activeCategory) return `Filtered to: ${activeDepartment} · ${activeCategory}`;
+  if (activeDepartment && activeCategory) return `Filtered to: ${activeDepartment} - ${activeCategory}`;
   if (activeDepartment) return `Filtered to: ${activeDepartment} department`;
   if (activeCategory) return `Filtered to: ${activeCategory} category`;
   return "All departments, all categories";
@@ -38,10 +38,10 @@ function scopeText(activeDepartment, activeCategory) {
 
 function StatBlock({ label, value, note }) {
   return (
-    <div className="border border-gray-300 bg-gray-50 p-5">
-      <p className="text-4xl font-bold text-gray-950">{value}</p>
-      <p className="mt-2 text-sm font-semibold text-gray-900">{label}</p>
-      <p className="mt-1 text-xs leading-5 text-gray-600">{note}</p>
+    <div style={{ border: "1px solid #d1d5db", background: "#f9fafb", padding: 20 }}>
+      <p style={{ margin: 0, color: "#111827", fontSize: 38, lineHeight: 1.1, fontWeight: 800 }}>{value}</p>
+      <p style={{ margin: "10px 0 0", color: "#111827", fontSize: 14, fontWeight: 700 }}>{label}</p>
+      <p style={{ margin: "4px 0 0", color: "#4b5563", fontSize: 12, lineHeight: 1.6 }}>{note}</p>
     </div>
   );
 }
@@ -60,17 +60,30 @@ export default function ExportSummary({
   const topRows = (ranking || []).slice(0, 5);
 
   return (
-    <div className="w-[800px] bg-white p-10 text-gray-950">
-      <header className="border-b border-gray-300 pb-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Workforce Pulse</p>
-        <h1 className="mt-2 text-3xl font-bold text-gray-950">Workforce Pulse — Executive Summary</h1>
-        <p className="mt-3 text-sm text-gray-700">
-          Date range: {formatDate(dateRange?.start)} to {formatDate(dateRange?.end)} · {scopeText(activeDepartment, activeCategory)}
+    <div
+      style={{
+        width: 800,
+        boxSizing: "border-box",
+        background: "#ffffff",
+        color: "#111827",
+        padding: 40,
+        fontFamily: "Arial, Helvetica, sans-serif",
+      }}
+    >
+      <header style={{ borderBottom: "1px solid #d1d5db", paddingBottom: 20 }}>
+        <p style={{ margin: 0, color: "#6b7280", fontSize: 12, fontWeight: 700, letterSpacing: 1.6, textTransform: "uppercase" }}>
+          Workforce Pulse
         </p>
-        <p className="mt-1 text-xs text-gray-500">Generated {formatDateTime(generatedAt)}</p>
+        <h1 style={{ margin: "8px 0 0", color: "#111827", fontSize: 30, lineHeight: 1.2, fontWeight: 800 }}>
+          Workforce Pulse - Executive Summary
+        </h1>
+        <p style={{ margin: "12px 0 0", color: "#374151", fontSize: 14 }}>
+          Date range: {formatDate(dateRange?.start)} to {formatDate(dateRange?.end)} - {scopeText(activeDepartment, activeCategory)}
+        </p>
+        <p style={{ margin: "4px 0 0", color: "#6b7280", fontSize: 12 }}>Generated {formatDateTime(generatedAt)}</p>
       </header>
 
-      <section className="mt-8 grid grid-cols-2 gap-5">
+      <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 32 }}>
         <StatBlock
           label="Hours/Month Recoverable"
           value={(headlineMetrics?.recoverableHoursPerMonth || 0).toLocaleString("en-IN", {
@@ -80,38 +93,38 @@ export default function ExportSummary({
           note={`Based on ${repetitiveRows} repetitive-task rows and a ${recoveryRate}% automation-recovery assumption.`}
         />
         <StatBlock
-          label="₹/Month Recoverable"
+          label="INR/Month Recoverable"
           value={INR_FORMATTER.format(headlineMetrics?.recoverableINRPerMonth || 0)}
           note={`Uses compensation-backed rows and ${Number(methodology.minutesPerWorkingMonth || 0).toLocaleString("en-IN")} working minutes/month.`}
         />
       </section>
 
-      <section className="mt-9">
-        <h2 className="text-lg font-bold text-gray-950">Top 5 Automation Opportunities</h2>
-        <table className="mt-4 w-full border-collapse text-left text-sm">
+      <section style={{ marginTop: 36 }}>
+        <h2 style={{ margin: 0, color: "#111827", fontSize: 18, fontWeight: 800 }}>Top 5 Automation Opportunities</h2>
+        <table style={{ marginTop: 16, width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: 14 }}>
           <thead>
-            <tr className="bg-gray-100 text-gray-700">
-              <th className="border border-gray-300 px-3 py-2">Rank</th>
-              <th className="border border-gray-300 px-3 py-2">Task Category</th>
-              <th className="border border-gray-300 px-3 py-2">Priority Score</th>
-              <th className="border border-gray-300 px-3 py-2">Est. ₹/Month</th>
+            <tr style={{ background: "#f3f4f6", color: "#374151" }}>
+              <th style={{ border: "1px solid #d1d5db", padding: "8px 12px" }}>Rank</th>
+              <th style={{ border: "1px solid #d1d5db", padding: "8px 12px" }}>Task Category</th>
+              <th style={{ border: "1px solid #d1d5db", padding: "8px 12px" }}>Priority Score</th>
+              <th style={{ border: "1px solid #d1d5db", padding: "8px 12px" }}>Est. INR/Month</th>
             </tr>
           </thead>
           <tbody>
             {topRows.length ? (
               topRows.map((row) => (
                 <tr key={row.taskCategory}>
-                  <td className="border border-gray-300 px-3 py-2 font-semibold">#{row.rank}</td>
-                  <td className="border border-gray-300 px-3 py-2">{row.taskCategory}</td>
-                  <td className="border border-gray-300 px-3 py-2">{Number(row.priorityScore || 0).toFixed(3)}</td>
-                  <td className="border border-gray-300 px-3 py-2 font-semibold">
+                  <td style={{ border: "1px solid #d1d5db", padding: "8px 12px", fontWeight: 700 }}>#{row.rank}</td>
+                  <td style={{ border: "1px solid #d1d5db", padding: "8px 12px" }}>{row.taskCategory}</td>
+                  <td style={{ border: "1px solid #d1d5db", padding: "8px 12px" }}>{Number(row.priorityScore || 0).toFixed(3)}</td>
+                  <td style={{ border: "1px solid #d1d5db", padding: "8px 12px", fontWeight: 700 }}>
                     {INR_FORMATTER.format(row.rawStats?.recoverableRupeesPerMonth || 0)}
                   </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td className="border border-gray-300 px-3 py-3 text-gray-500" colSpan="4">
+                <td style={{ border: "1px solid #d1d5db", padding: 12, color: "#6b7280" }} colSpan="4">
                   No automation opportunities available for this scope.
                 </td>
               </tr>
@@ -120,7 +133,7 @@ export default function ExportSummary({
         </table>
       </section>
 
-      <footer className="mt-10 border-t border-gray-300 pt-4 text-xs text-gray-500">
+      <footer style={{ marginTop: 40, borderTop: "1px solid #d1d5db", paddingTop: 16, color: "#6b7280", fontSize: 12 }}>
         Generated by Workforce Pulse
       </footer>
     </div>

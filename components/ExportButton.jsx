@@ -32,13 +32,14 @@ export default function ExportButton({
         import("jspdf"),
       ]);
 
-      await new Promise((resolve) => requestAnimationFrame(resolve));
+      await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       if (!summaryRef.current) throw new Error("Export layout was not ready.");
 
       const canvas = await html2canvas(summaryRef.current, {
         backgroundColor: "#ffffff",
         scale: 2,
         useCORS: true,
+        logging: false,
       });
       const imageData = canvas.toDataURL("image/png");
       const pdfWidth = 210;
@@ -51,8 +52,8 @@ export default function ExportButton({
 
       pdf.addImage(imageData, "PNG", 0, 0, pdfWidth, pdfHeight);
       pdf.save(`workforce-pulse-summary-${filenameDate(exportTime)}.pdf`);
-    } catch {
-      setError("Export failed, try again");
+    } catch (error) {
+      setError(error instanceof Error ? `Export failed: ${error.message}` : "Export failed, try again");
     } finally {
       setGenerating(false);
     }

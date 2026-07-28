@@ -5,7 +5,9 @@ import { computeAutomationRanking } from "@/lib/ranking";
 import { computeWeeklyRepetitiveShare } from "@/lib/trends";
 
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.6-flash"; // Configurable in .env; fallback stays on a current GA Flash model.
-const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
+const GEMINI_ENDPOINT =
+  process.env.GEMINI_ENDPOINT ||
+  `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 const TOP_EMPLOYEE_TASKS = 3;
 
 function employeeIdFor(row) {
