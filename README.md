@@ -1,4 +1,4 @@
-﻿## Workforce Pulse â€” Methodology
+﻿## Workforce Pulse - Methodology
 
 ### 1. Data Assumptions
 
@@ -69,4 +69,5 @@
 - Add streaming responses and richer citation rendering to the AI assistant.
 
 - Add authentication and tenant isolation if this becomes a multi-company product.
+
 
