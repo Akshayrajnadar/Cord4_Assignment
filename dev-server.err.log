@@ -1,0 +1,21 @@
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'toLocaleString')
+    at HeadlineNumbers (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/_1_dcpmb._.js?id=%255Bproject%255D%252Fcomponents%252FHeadlineNumbers.jsx+%255Bapp-client%255D+%2528ecmascript%2529:471:65)
+    at Object.react_stack_bottom_frame (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://D:/Cord4 Assignment/cord4assignment/.next/dev/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+    at DashboardPage (app\page.js:32:9)
+  30 |         </header>
+  31 |
+> 32 |         <HeadlineNumbers metrics={dataset.metrics} />
+     |         ^
+  33 |         <AnomalyCallout anomalies={dataset.anomalies} />
+  34 |
+  35 |         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">

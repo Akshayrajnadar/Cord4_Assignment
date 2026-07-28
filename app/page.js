@@ -29,7 +29,7 @@ export default function DashboardPage() {
           <ExportButton dataset={dataset} />
         </header>
 
-        <HeadlineNumbers metrics={dataset.metrics} />
+        <HeadlineNumbers metrics={dataset.headlineMetrics} />
         <AnomalyCallout anomalies={dataset.anomalies} />
 
         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">

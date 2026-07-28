@@ -19,3 +19,16 @@ Creating turbopack project { dir: 'D:\\Cord4 Assignment\\cord4assignment', testM
  GET / 200 in 498ms (next.js: 110ms, application-code: 388ms)
  GET / 200 in 233ms (next.js: 6ms, application-code: 226ms)
  GET / 200 in 138ms (next.js: 11ms, application-code: 127ms)
+✓ Compiled in 65ms
+ GET / 200 in 595ms (next.js: 124ms, application-code: 471ms)
+ GET / 200 in 325ms (next.js: 9ms, application-code: 316ms)
+ GET / 200 in 195ms (next.js: 17ms, application-code: 179ms)
+ GET / 200 in 431ms (next.js: 11ms, application-code: 421ms)
+✓ Compiled in 122ms
+ GET / 200 in 761ms (next.js: 85ms, application-code: 675ms)
+ GET / 200 in 544ms (next.js: 7ms, application-code: 537ms)
+ GET / 200 in 440ms (next.js: 297ms, application-code: 143ms)
+ GET / 200 in 447ms (next.js: 17ms, application-code: 430ms)
+ GET / 200 in 446ms (next.js: 177ms, application-code: 269ms)
+✓ Compiled in 136ms
+ GET / 200 in 879ms (next.js: 155ms, application-code: 724ms)
